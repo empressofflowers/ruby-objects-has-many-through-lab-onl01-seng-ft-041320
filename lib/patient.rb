@@ -9,7 +9,7 @@ class Patient
     @name = name
     @@all << self
   end
- 
+
   def self.all
     @@all
   end
@@ -18,8 +18,8 @@ class Patient
     Appointment.new(date,self, doctor)
   end
 
-  def songs
-    Song.all.select { |song| song.genre == self }
+  def appointments
+    Appointment.all.select { |appointment| patient.appointment == self }
   end
 
   def artists
