@@ -22,7 +22,7 @@ class Patient
     Appointment.all.select { |appointment| patient.appointment == self }
   end
 
-  def artists
-    songs.map {|song| song.artist }
+  def doctors
+    appointments.map {|appointment| appointment.doctor }
   end
 end
